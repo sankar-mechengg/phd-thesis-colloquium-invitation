@@ -98,18 +98,23 @@ npm run dev
 
 ```
 your-project/
-├── SankarPhDThesisInvitation.jsx
-├── IISc_Master_Seal_Black.jpg
-├── MechLogoHiRes.png
-├── App.jsx (or App.js)
-├── main.jsx (or index.js)
+├── public/
+│   ├── IIScLogoTransparent.png
+│   └── MechIIScLogoTransparent.png
+├── src/ (or root)
+│   ├── SankarPhDThesisInvitation.jsx
+│   ├── App.jsx (or App.js)
+│   └── main.jsx (or index.js)
 ├── package.json
 └── vite.config.js (if using Vite)
 ```
 
 ## Important Notes
 
-1. **Image Paths**: The component now uses relative paths (`./IISc_Master_Seal_Black.jpg`). Make sure the images are in the same directory or adjust paths accordingly.
+1. **Image Paths**: The component uses absolute paths (`/IIScLogoTransparent.png`) which reference files in the `public/` folder. For Vite projects:
+   - Create a `public/` folder in the root directory
+   - Move image files (`IIScLogoTransparent.png` and `MechIIScLogoTransparent.png`) into the `public/` folder
+   - Images will be served from the root path in production (Vercel, etc.)
 
 2. **Google Fonts**: The component automatically loads Google Fonts (Cormorant Garamond and Outfit) via a `<style>` tag.
 

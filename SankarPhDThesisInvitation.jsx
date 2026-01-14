@@ -352,7 +352,7 @@ const ThesisInvitation = () => {
             justifyContent: 'center',
           }}>
             <img 
-              src="./IIScLogoTransparent.png" 
+              src="/IIScLogoTransparent.png" 
               alt="IISc Logo"
               style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
               crossOrigin="anonymous"
@@ -383,7 +383,7 @@ const ThesisInvitation = () => {
             justifyContent: 'center',
           }}>
             <img 
-              src="./MechIIScLogoTransparent.png"
+              src="/MechIIScLogoTransparent.png"
               alt="Mechanical Engineering Logo"
               style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
               crossOrigin="anonymous"
