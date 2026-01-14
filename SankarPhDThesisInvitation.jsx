@@ -282,76 +282,6 @@ const ThesisInvitation = () => {
       fontFamily: "'Cormorant Garamond', Georgia, serif"
     }}>
       
-      {/* Download Buttons */}
-      <div style={{
-        display: 'flex',
-        gap: '16px',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-      }}>
-        <button
-          onClick={downloadAsPNG}
-          disabled={downloading || downloadingPDF}
-          style={{
-            padding: '14px 32px',
-            fontSize: '15px',
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: '500',
-            color: '#1a1a2e',
-            background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%)',
-            border: 'none',
-            borderRadius: '50px',
-            cursor: (downloading || downloadingPDF) ? 'wait' : 'pointer',
-            boxShadow: '0 4px 20px rgba(252, 211, 77, 0.3)',
-            transition: 'all 0.3s ease',
-            letterSpacing: '0.5px'
-          }}
-          onMouseOver={(e) => {
-            if (!downloading && !downloadingPDF) {
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 6px 25px rgba(252, 211, 77, 0.4)';
-            }
-          }}
-          onMouseOut={(e) => {
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 4px 20px rgba(252, 211, 77, 0.3)';
-          }}
-        >
-          {downloading ? '⏳ Generating...' : '⬇ Download as PNG'}
-        </button>
-        
-        <button
-          onClick={downloadAsPDF}
-          disabled={downloading || downloadingPDF}
-          style={{
-            padding: '14px 32px',
-            fontSize: '15px',
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: '500',
-            color: '#1a1a2e',
-            background: 'linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%)',
-            border: 'none',
-            borderRadius: '50px',
-            cursor: (downloading || downloadingPDF) ? 'wait' : 'pointer',
-            boxShadow: '0 4px 20px rgba(249, 168, 212, 0.3)',
-            transition: 'all 0.3s ease',
-            letterSpacing: '0.5px'
-          }}
-          onMouseOver={(e) => {
-            if (!downloading && !downloadingPDF) {
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 6px 25px rgba(249, 168, 212, 0.4)';
-            }
-          }}
-          onMouseOut={(e) => {
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 4px 20px rgba(249, 168, 212, 0.3)';
-          }}
-        >
-          {downloadingPDF ? '⏳ Generating...' : '📄 Download as PDF'}
-        </button>
-      </div>
-
       {/* Invitation Card */}
       <div
         ref={invitationRef}
@@ -753,7 +683,7 @@ const ThesisInvitation = () => {
               color: '#1e1b4b',
               margin: '0',
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-            }}>28th January</p>
+            }}>28<sup>th</sup> January</p>
             <p style={{
               fontSize: '14px',
               color: '#4c1d95',
@@ -857,6 +787,58 @@ const ThesisInvitation = () => {
               fontWeight: '500',
             }}>View on Map</span>
           </a>
+        </div>
+
+        {/* Unabridged Presentation */}
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '24px',
+          padding: '20px',
+          background: 'rgba(245,158,11,0.08)',
+          borderRadius: '16px',
+          border: '1px solid rgba(245,158,11,0.2)',
+          position: 'relative',
+          zIndex: 1,
+        }}>
+          <p style={{
+            fontSize: '11px',
+            letterSpacing: '2px',
+            color: '#6b7280',
+            margin: '0 0 10px 0',
+            fontFamily: "'Outfit', sans-serif",
+            textTransform: 'uppercase',
+            fontWeight: '500',
+          }}>Unabridged Presentation</p>
+          <p style={{
+            fontSize: '16px',
+            fontWeight: '600',
+            color: '#1e1b4b',
+            margin: '0 0 8px 0',
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+          }}>
+            22<sup>nd</sup> January 2026
+          </p>
+          <p style={{
+            fontSize: '14px',
+            color: '#92400e',
+            margin: '0 0 8px 0',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: '500',
+          }}>3:00 PM IST</p>
+          <p style={{
+            fontSize: '14px',
+            fontWeight: '600',
+            color: '#1e1b4b',
+            margin: '0',
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
+          }}>MMCR</p>
+          <p style={{
+            fontSize: '12px',
+            color: '#92400e',
+            margin: '4px 0 0 0',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: '500',
+          }}>Department of Design and Manufacturing (CPDM)</p>
         </div>
 
         {/* Address */}
@@ -989,6 +971,77 @@ const ThesisInvitation = () => {
           borderBottom: '2px solid rgba(167,139,250,0.3)',
           borderRight: '2px solid rgba(167,139,250,0.3)',
         }} />
+      </div>
+
+      {/* Download Buttons */}
+      <div style={{
+        display: 'flex',
+        gap: '16px',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        marginTop: '24px',
+      }}>
+        <button
+          onClick={downloadAsPNG}
+          disabled={downloading || downloadingPDF}
+          style={{
+            padding: '14px 32px',
+            fontSize: '15px',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: '500',
+            color: '#1a1a2e',
+            background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%)',
+            border: 'none',
+            borderRadius: '50px',
+            cursor: (downloading || downloadingPDF) ? 'wait' : 'pointer',
+            boxShadow: '0 4px 20px rgba(252, 211, 77, 0.3)',
+            transition: 'all 0.3s ease',
+            letterSpacing: '0.5px'
+          }}
+          onMouseOver={(e) => {
+            if (!downloading && !downloadingPDF) {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 6px 25px rgba(252, 211, 77, 0.4)';
+            }
+          }}
+          onMouseOut={(e) => {
+            e.target.style.transform = 'translateY(0)';
+            e.target.style.boxShadow = '0 4px 20px rgba(252, 211, 77, 0.3)';
+          }}
+        >
+          {downloading ? '⏳ Generating...' : '⬇ Download as PNG'}
+        </button>
+        
+        <button
+          onClick={downloadAsPDF}
+          disabled={downloading || downloadingPDF}
+          style={{
+            padding: '14px 32px',
+            fontSize: '15px',
+            fontFamily: "'Outfit', sans-serif",
+            fontWeight: '500',
+            color: '#1a1a2e',
+            background: 'linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%)',
+            border: 'none',
+            borderRadius: '50px',
+            cursor: (downloading || downloadingPDF) ? 'wait' : 'pointer',
+            boxShadow: '0 4px 20px rgba(249, 168, 212, 0.3)',
+            transition: 'all 0.3s ease',
+            letterSpacing: '0.5px'
+          }}
+          onMouseOver={(e) => {
+            if (!downloading && !downloadingPDF) {
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 6px 25px rgba(249, 168, 212, 0.4)';
+            }
+          }}
+          onMouseOut={(e) => {
+            e.target.style.transform = 'translateY(0)';
+            e.target.style.boxShadow = '0 4px 20px rgba(249, 168, 212, 0.3)';
+          }}
+        >
+          {downloadingPDF ? '⏳ Generating...' : '📄 Download as PDF'}
+        </button>
       </div>
 
       {/* Google Fonts */}
