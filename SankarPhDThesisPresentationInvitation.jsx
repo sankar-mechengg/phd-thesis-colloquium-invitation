@@ -197,14 +197,22 @@ const ThesisInvitation = () => {
         };
       });
       
+      // Get actual dimensions including padding
+      const rect = element.getBoundingClientRect();
+      const padding = 0; // No extra padding needed
+      
       // Convert invitation to canvas
       const canvas = await html2canvas(element, {
         scale: scale,
         backgroundColor: null,
         useCORS: true,
         logging: false,
-        height: element.scrollHeight,
-        width: element.scrollWidth,
+        height: element.scrollHeight + padding * 2,
+        width: element.scrollWidth + padding * 2,
+        windowHeight: element.scrollHeight + padding * 2,
+        windowWidth: element.scrollWidth + padding * 2,
+        x: -padding,
+        y: -padding,
         fontEmbedCSS: true,
         onclone: (clonedDoc) => {
           // Ensure fonts are applied in cloned document
@@ -235,18 +243,18 @@ const ThesisInvitation = () => {
       // Convert canvas to image data
       const imgData = canvas.toDataURL('image/png');
       
-      // Calculate PDF dimensions
+      // Use exact canvas dimensions for PDF (no buffer needed)
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
       
-      // Create PDF with same dimensions as canvas
+      // Create PDF with exact dimensions as canvas
       const pdf = new jsPDF({
         orientation: imgWidth > imgHeight ? 'landscape' : 'portrait',
         unit: 'px',
         format: [imgWidth, imgHeight]
       });
       
-      // Add image to PDF
+      // Add image to PDF at exact position (0,0) to fill entire page
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
       
       // Add clickable links to PDF
