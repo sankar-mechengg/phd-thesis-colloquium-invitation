@@ -678,12 +678,12 @@ const ThesisInvitation = () => {
               textTransform: 'uppercase',
             }}>Date</p>
             <p style={{
-              fontSize: '18px',
-              fontWeight: '600',
+              fontSize: '28px',
+              fontWeight: '700',
               color: '#1e1b4b',
               margin: '0',
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-            }}>28<sup>th</sup> January</p>
+            }}>28<sup>th</sup> January<br /><span style={{ fontSize: '16px', fontWeight: '400' }}>Wednesday</span></p>
             <p style={{
               fontSize: '14px',
               color: '#4c1d95',
@@ -709,12 +709,12 @@ const ThesisInvitation = () => {
               textTransform: 'uppercase',
             }}>Time</p>
             <p style={{
-              fontSize: '18px',
+              fontSize: '24px',
               fontWeight: '600',
               color: '#1e1b4b',
               margin: '0',
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-            }}>3:00 PM</p>
+            }}>4:00 PM</p>
             <p style={{
               fontSize: '14px',
               color: '#92400e',
@@ -740,19 +740,19 @@ const ThesisInvitation = () => {
               textTransform: 'uppercase',
             }}>Venue</p>
             <p style={{
-              fontSize: '16px',
+              fontSize: '18px',
               fontWeight: '600',
               color: '#1e1b4b',
               margin: '0',
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-            }}>MMCR</p>
+            }}>Conference Room</p>
             <p style={{
-              fontSize: '11px',
+              fontSize: '14px',
               color: '#047857',
               margin: '2px 0 0 0',
               fontFamily: "'Outfit', sans-serif",
               fontWeight: '500',
-            }}>Dept. of Mechanical</p>
+            }}>Dept of Mechanical Engineering</p>
           </div>
         </div>
 
@@ -760,12 +760,12 @@ const ThesisInvitation = () => {
         <div style={{
           display: 'flex',
           justifyContent: 'center',
-          marginBottom: '20px',
+          marginBottom: '16px',
           position: 'relative',
           zIndex: 1,
         }}>
           <a 
-            href="https://maps.app.goo.gl/efu2PXq9mKmoHyrV7" 
+            href="https://maps.app.goo.gl/2cH53RaJ9FVAJ6bQ8" 
             target="_blank" 
             rel="noopener noreferrer"
             style={{
@@ -789,58 +789,6 @@ const ThesisInvitation = () => {
           </a>
         </div>
 
-        {/* Unabridged Presentation */}
-        <div style={{
-          textAlign: 'center',
-          marginBottom: '24px',
-          padding: '20px',
-          background: 'rgba(245,158,11,0.08)',
-          borderRadius: '16px',
-          border: '1px solid rgba(245,158,11,0.2)',
-          position: 'relative',
-          zIndex: 1,
-        }}>
-          <p style={{
-            fontSize: '11px',
-            letterSpacing: '2px',
-            color: '#6b7280',
-            margin: '0 0 10px 0',
-            fontFamily: "'Outfit', sans-serif",
-            textTransform: 'uppercase',
-            fontWeight: '500',
-          }}>Unabridged Presentation</p>
-          <p style={{
-            fontSize: '16px',
-            fontWeight: '600',
-            color: '#1e1b4b',
-            margin: '0 0 8px 0',
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-          }}>
-            22<sup>nd</sup> January 2026
-          </p>
-          <p style={{
-            fontSize: '14px',
-            color: '#92400e',
-            margin: '0 0 8px 0',
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: '500',
-          }}>3:00 PM IST</p>
-          <p style={{
-            fontSize: '14px',
-            fontWeight: '600',
-            color: '#1e1b4b',
-            margin: '0',
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-          }}>MMCR</p>
-          <p style={{
-            fontSize: '12px',
-            color: '#92400e',
-            margin: '4px 0 0 0',
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: '500',
-          }}>Department of Design and Manufacturing (CPDM)</p>
-        </div>
-
         {/* Address */}
         <div style={{
           textAlign: 'center',
@@ -861,6 +809,22 @@ const ThesisInvitation = () => {
         </div>
 
         {/* Links Section */}
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '16px',
+          position: 'relative',
+          zIndex: 1,
+        }}>
+          <p style={{
+            fontSize: '13px',
+            color: '#6b7280',
+            margin: '0 0 12px 0',
+            fontFamily: "'Outfit', sans-serif",
+            fontStyle: 'italic',
+          }}>
+            To learn more about Sankar, feel free to explore:
+          </p>
+        </div>
         <div style={{
           display: 'flex',
           justifyContent: 'center',
