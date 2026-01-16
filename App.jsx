@@ -15,17 +15,18 @@ function App() {
         right: 0,
         zIndex: 1000,
         background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%)',
-        padding: '12px 20px',
+        padding: 'clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px)',
         display: 'flex',
         justifyContent: 'center',
-        gap: '12px',
+        gap: 'clamp(6px, 2vw, 12px)',
         boxShadow: '0 2px 10px rgba(0,0,0,0.3)',
+        flexWrap: 'wrap',
       }}>
         <button
           onClick={() => setActiveTab('presentation1')}
           style={{
-            padding: '10px 24px',
-            fontSize: '14px',
+            padding: 'clamp(8px, 2vw, 10px) clamp(16px, 4vw, 24px)',
+            fontSize: 'clamp(12px, 2.5vw, 14px)',
             fontFamily: "'Outfit', sans-serif",
             fontWeight: '500',
             color: activeTab === 'presentation1' ? '#1a1a2e' : '#fef3c7',
@@ -56,8 +57,8 @@ function App() {
         <button
           onClick={() => setActiveTab('presentation2')}
           style={{
-            padding: '10px 24px',
-            fontSize: '14px',
+            padding: 'clamp(8px, 2vw, 10px) clamp(16px, 4vw, 24px)',
+            fontSize: 'clamp(12px, 2.5vw, 14px)',
             fontFamily: "'Outfit', sans-serif",
             fontWeight: '500',
             color: activeTab === 'presentation2' ? '#1a1a2e' : '#fef3c7',
@@ -88,7 +89,7 @@ function App() {
       </div>
 
       {/* Content with top padding to account for fixed tabs */}
-      <div style={{ marginTop: '60px' }}>
+      <div style={{ marginTop: 'clamp(48px, 12vw, 60px)' }}>
         {activeTab === 'presentation1' ? (
           <ThesisPresentation />
         ) : (

@@ -1,0 +1,48 @@
+/* Responsive styles for invitation cards */
+:root{
+  --card-max-width:700px;
+}
+
+html,body,#root{height:100%;margin:0;padding:0}
+
+.App{min-height:100%;}
+
+.invitation-card{
+  width: min(var(--card-max-width), 95%);
+  min-height: min(950px, 95vh);
+  padding: clamp(20px, 4.5vw, 48px);
+  box-sizing: border-box;
+}
+
+.invitation-card img{max-width:100%;height:auto;display:block}
+
+/* Orbital visualization sizing */
+.invitation-card .orbital{width: min(280px, 60vw) !important; height: min(280px, 60vw) !important; margin: 20px auto 24px !important}
+.invitation-card .orbit-center{width: min(80px, 18vw) !important; height: min(80px, 18vw) !important}
+.invitation-card .orbit-item{width: min(42px, 10vw) !important; height: min(42px, 10vw) !important}
+
+/* Event details grid */
+.invitation-card .event-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
+
+/* Buttons and link groups */
+.invitation-card .cta-buttons, .invitation-card .link-buttons{display:flex; gap:16px; flex-wrap:wrap; justify-content:center}
+
+/* Mobile adjustments */
+@media (max-width: 640px){
+  .invitation-card{padding:18px !important}
+  .invitation-card h1{font-size:14px !important; letter-spacing:3px !important}
+  .invitation-card h2{font-size:18px !important}
+  .invitation-card h3{font-size:20px !important}
+  .invitation-card p{font-size:13px !important}
+  .invitation-card .event-grid{grid-template-columns:1fr !important}
+  .invitation-card .orbital{width: min(220px, 70vw) !important; height: min(220px, 70vw) !important}
+  .invitation-card .orbit-center{width: min(64px, 16vw) !important; height: min(64px, 16vw) !important}
+  .invitation-card .orbit-item{width: min(36px, 9vw) !important; height: min(36px, 9vw) !important; font-size:6px !important}
+  .invitation-card .cta-buttons, .invitation-card .link-buttons{gap:10px}
+}
+
+@media (max-width: 380px){
+  .invitation-card h1{font-size:12px !important}
+  .invitation-card h2{font-size:16px !important}
+  .invitation-card h3{font-size:18px !important}
+}

@@ -293,12 +293,13 @@ const ThesisInvitation = () => {
       {/* Invitation Card */}
       <div
         ref={invitationRef}
+        className="invitation-card"
         style={{
-          width: '700px',
-          minHeight: '950px',
+          width: 'min(700px, 95%)',
+          minHeight: 'min(950px, 95vh)',
           background: 'linear-gradient(160deg, #fefce8 0%, #fef9e7 20%, #fdf4e3 40%, #fce7f3 70%, #f3e8ff 100%)',
           borderRadius: '24px',
-          padding: '48px 40px',
+          padding: 'clamp(20px, 4.5vw, 48px)',
           position: 'relative',
           overflow: 'hidden',
           boxShadow: '0 25px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.8)',
@@ -436,7 +437,7 @@ const ThesisInvitation = () => {
         </div>
 
         {/* GEMINI Orbital Visualization */}
-        <div style={{
+        <div className="orbital" style={{
           position: 'relative',
           width: '280px',
           height: '280px',
@@ -465,7 +466,7 @@ const ThesisInvitation = () => {
           }} />
           
           {/* Center - GEMINI */}
-          <div style={{
+          <div className="orbit-center" style={{
             position: 'absolute',
             top: '50%',
             left: '50%',
@@ -498,6 +499,7 @@ const ThesisInvitation = () => {
             return (
               <div
                 key={system.name}
+                className="orbit-item"
                 style={{
                   position: 'absolute',
                   top: '50%',
@@ -662,7 +664,7 @@ const ThesisInvitation = () => {
         </div>
 
         {/* Event Details */}
-        <div style={{
+        <div className="event-grid" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr 1fr',
           gap: '16px',
@@ -858,7 +860,7 @@ const ThesisInvitation = () => {
             To learn more about Sankar, feel free to explore:
           </p>
         </div>
-        <div style={{
+        <div className="link-buttons" style={{
           display: 'flex',
           justifyContent: 'center',
           gap: '24px',
@@ -971,7 +973,7 @@ const ThesisInvitation = () => {
       </div>
 
       {/* Download Buttons */}
-      <div style={{
+      <div className="cta-buttons" style={{
         display: 'flex',
         gap: '16px',
         flexWrap: 'wrap',
