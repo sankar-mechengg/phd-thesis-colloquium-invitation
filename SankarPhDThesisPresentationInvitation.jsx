@@ -753,7 +753,7 @@ const ThesisInvitation = () => {
               color: '#1e1b4b',
               margin: '0',
               fontFamily: "'Cormorant Garamond', Georgia, serif",
-            }}>MMCR/Classroom</p>
+            }}>MMCR</p>
             <p style={{
               fontSize: '14px',
               color: '#047857',
