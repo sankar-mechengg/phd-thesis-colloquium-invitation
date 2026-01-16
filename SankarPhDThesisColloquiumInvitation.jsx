@@ -764,14 +764,39 @@ const ThesisInvitation = () => {
           </div>
         </div>
 
-        {/* Map Link */}
+        {/* Map Link and Video Link */}
         <div style={{
           display: 'flex',
           justifyContent: 'center',
+          gap: '16px',
           marginBottom: '16px',
           position: 'relative',
           zIndex: 1,
         }}>
+          <a 
+            href="https://teams.microsoft.com/meet/42898435151686?p=mJompATePVf3e6UOq9" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '10px 20px',
+              background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+              borderRadius: '25px',
+              textDecoration: 'none',
+              boxShadow: '0 3px 12px rgba(99,102,241,0.3)',
+            }}
+          >
+            <span style={{ fontSize: '16px' }}>🎥</span>
+            <span style={{
+              color: '#ffffff',
+              fontSize: '12px',
+              fontFamily: "'Outfit', sans-serif",
+              fontWeight: '500',
+            }}>Join Online Video</span>
+          </a>
+          
           <a 
             href="https://maps.app.goo.gl/2cH53RaJ9FVAJ6bQ8" 
             target="_blank" 
